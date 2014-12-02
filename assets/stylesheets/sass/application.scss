@@ -1,3 +1,21 @@
+/* ************ **
+** ** MIXINS ** **
+** ************ */
+
+@mixin vendor($a, $v) {
+  -webkit-#{$a}: $v;
+  -moz-#{$a}: $v;
+  -ms-#{$a}: $v;
+  -o-#{$a}: $v;
+  #{$a}: $v;
+}
+
+@mixin clearfix() {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /* *********** **
 ** ** RESET ** **
 ** *********** */
@@ -6,11 +24,14 @@
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   box-sizing: border-box;
 }
 
 html, body {
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ************** **
